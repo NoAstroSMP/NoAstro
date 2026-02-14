@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NoAstro Access</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loginbg">
+
+<div class="loginbox">
+<h1>CLASSIFIED ACCESS</h1>
+<p>NoAstro Research Network</p>
+
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+
+<button onclick="login()">ENTER</button>
+
+<p class="hint">authorized personnel only</p>
+</div>
+
+<script>
+function login(){
+ let u=document.getElementById("user").value;
+ let p=document.getElementById("pass").value;
+
+ if(u==="noastro" && p==="void"){
+   window.location="index.html";
+ } else {
+   alert("ACCESS DENIED");
+ }
+}
+</script>
+
+</body>
+</html>
