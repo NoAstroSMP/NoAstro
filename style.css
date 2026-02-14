@@ -1,0 +1,85 @@
+body{
+ margin:0;
+ background:black;
+ color:#b884ff;
+ font-family:Consolas,monospace;
+ overflow:hidden;
+}
+
+.loginbg{
+ background:radial-gradient(circle,#14001f,#000);
+}
+
+.container{
+ text-align:center;
+ padding-top:10%;
+}
+
+h1{
+ font-size:70px;
+ text-shadow:0 0 25px #9333ea;
+}
+
+.subtitle{
+ opacity:0.6;
+ letter-spacing:4px;
+}
+
+.panel{
+ margin:auto;
+ margin-top:40px;
+ width:60%;
+ padding:30px;
+ border:1px solid #7e22ce;
+ box-shadow:0 0 40px #6d28d9;
+ background:rgba(0,0,0,0.7);
+ border-radius:14px;
+}
+
+.ip{
+ font-size:26px;
+ color:white;
+}
+
+button,.btn{
+ margin:10px;
+ padding:12px 20px;
+ background:none;
+ border:1px solid #7e22ce;
+ color:#c084fc;
+ border-radius:8px;
+ cursor:pointer;
+ text-decoration:none;
+}
+
+button:hover,.btn:hover{
+ background:#7e22ce;
+ color:black;
+ box-shadow:0 0 20px #a855f7;
+}
+
+.loginbox{
+ width:320px;
+ margin:auto;
+ margin-top:12%;
+ padding:30px;
+ border:1px solid #7e22ce;
+ box-shadow:0 0 40px #6d28d9;
+ background:rgba(0,0,0,0.8);
+ border-radius:12px;
+ text-align:center;
+}
+
+input{
+ width:90%;
+ padding:10px;
+ margin:8px;
+ background:black;
+ border:1px solid #7e22ce;
+ color:#c084fc;
+}
+
+.hint{
+ opacity:0.4;
+ font-size:12px;
+}
