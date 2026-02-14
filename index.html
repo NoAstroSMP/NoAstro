@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NoAstro SMP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio autoplay loop volume="0.05">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c1a.mp3?filename=dark-ambient-11474.mp3">
+</audio>
+
+<div class="container">
+
+<h1>NOASTRO SMP</h1>
+<p class="subtitle">CIA END DIVISION</p>
+
+<div class="panel">
+<p class="ip">IP: 66.115.77.135</p>
+
+<p>Status: <span id="status">Checking...</span></p>
+<p>Players: <span id="players">...</span>/50</p>
+
+<br>
+
+<button onclick="copyIP()">Copy IP</button>
+<a class="btn" href="https://discord.gg/SU76YS9eg3">Discord</a>
+<a class="btn" onclick="terminal()">Terminal</a>
+
+</div>
+
+</div>
+
+<script>
+function copyIP(){
+ navigator.clipboard.writeText("66.115.77.135");
+ alert("IP Copied");
+}
+
+fetch("https://api.mcsrvstat.us/2/66.115.77.135")
+.then(r=>r.json())
+.then(data=>{
+ if(data.online){
+  document.getElementById("status").innerText="ONLINE";
+  document.getElementById("players").innerText=data.players.online;
+ } else{
+  document.getElementById("status").innerText="OFFLINE";
+  document.getElementById("players").innerText="0";
+ }
+});
+
+function terminal(){
+ document.body.innerHTML=`
+ <div style="padding:40px;font-family:consolas;color:#00ff9f;background:black;height:100vh">
+ <h2>NOASTRO TERMINAL</h2>
+ <p>> connection established</p>
+ <p>> agent recognized</p>
+ <p>> server ip: 66.115.77.135</p>
+ <p>> clearance: END-OMEGA</p>
+ </div>`;
+}
+</script>
+
+</body>
+</html>
